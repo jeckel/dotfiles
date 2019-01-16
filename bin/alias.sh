@@ -25,6 +25,7 @@ alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias dl='docker logs'
 alias dlf='docker logs -f'
+dsh() { docker exec -it $1 sh; }
 
 # Docker-Compose
 alias dc='docker-compose'
@@ -43,3 +44,8 @@ alias ctask='clear && task'
 # Other
 
 alias composer='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) composer'
+
+# Some functions
+
+# ssh with tmux attach
+ssht() { ssh -t $1 tmux attach; }
