@@ -25,6 +25,7 @@ alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias dl='docker logs'
 alias dlf='docker logs -f'
+alias ddf='docker system df'
 dsh() { docker exec -it $1 sh; }
 
 # Docker-Compose
@@ -36,6 +37,8 @@ alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
 alias dcud='docker-compose up -d'
 alias dcd!='docker-compose down -v --remove-orphans'
+alias dcl='docker-compose logs'
+alias dclf='docker-compose logs -f'
 
 # Task Warrior
 
