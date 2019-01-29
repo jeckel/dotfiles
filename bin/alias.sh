@@ -33,12 +33,14 @@ alias dc='docker-compose'
 alias dcb='docker-compose build'
 alias dcbp='docker-compose build --pull'
 alias dcb!='docker-compose build --pull --no-cache'
+alias dcd!='docker-compose down -v --remove-orphans'
+alias dce='docker-compose exec'
+alias dcl='docker-compose logs'
+alias dclf='docker-compose logs -f'
+alias dcps='docker-compose ps'
 alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
 alias dcud='docker-compose up -d'
-alias dcd!='docker-compose down -v --remove-orphans'
-alias dcl='docker-compose logs'
-alias dclf='docker-compose logs -f'
 
 # Task Warrior
 
