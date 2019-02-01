@@ -5,6 +5,11 @@
 WORKSPACE=${WORKSPACE:-$HOME/Workspace}
 DOTFILES_PATH=${DOTFILES_PATH:-$HOME/dotfiles}
 CHEAT_PATH=${CHEAT_PATH:-$DOTFILES_PATH/cheat}
+NOTES_PATH=${NOTES_PATH:-$HOME/Documents/notes}
+
+# Set default editor to vim or nano
+EDITOR=${EDITOR:-/usr/bin/vim}
+# EDITOR=${EDITOR:-/bin/nano}
 
 # System
 alias upg='sudo apt-get update && sudo apt-get upgrade -y && sudo apt autoremove'
@@ -12,11 +17,11 @@ alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "sta
 alias dockly='if [ $(docker ps | grep dockly | wc -l) -eq 1 ]; then docker attach dockly; else docker run -it -v /var/run/docker.sock:/var/run/docker.sock --rm --name dockly lirantal/dockly; fi'
 alias dry='if [ $(docker ps | grep dry | wc -l) -eq 1 ]; then docker attach dry; else docker run -it -v /var/run/docker.sock:/var/run/docker.sock --rm --name dry moncho/dry; fi'
 
-alias W='cd $WORKSPACE'
+alias W='cd ${WORKSPACE}'
 
 # Edit config files
-alias ealias='vim $DOTFILES_PATH/bin/alias.sh && source $DOTFILES_PATH/bin/alias.sh'
-alias ehosts='sudo vim /etc/hosts'
+alias ealias='${EDITOR} ${DOTFILES_PATH}/bin/alias.sh && source ${DOTFILES_PATH}/bin/alias.sh'
+alias ehosts='sudo ${EDITOR} /etc/hosts'
 
 # Docker
 alias d='docker'
@@ -27,7 +32,7 @@ alias dpsa='docker ps -a'
 alias dl='docker logs'
 alias dlf='docker logs -f'
 alias ddf='docker system df'
-dsh() { docker exec -it $1 sh; }
+dsh() { docker exec -it ${1} sh; }
 
 # Docker-Compose
 alias dc='docker-compose'
@@ -54,14 +59,26 @@ alias composer='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) 
 # Some functions
 
 # ssh with tmux attach
-ssht() { ssh -t $1 tmux attach; }
+ssht() { ssh -t ${1} tmux attach; }
 
 # Display cheatsheet
-cheat() { 
+cheat() {
 	if [ -f ${CHEAT_PATH}/${1}.md ]; then
 		bat ${CHEAT_PATH}/${1}.md
 	else
 		echo "No cheat files found for ${1}"
 	fi
 }
-echeat() { vim ${CHEAT_PATH}/${1}.md; }
+echeat() { ${EDITOR} ${CHEAT_PATH}/${1}.md; }
+
+# Notes
+alias cdnotes='cd $NOTES_PATH'
+alias lsnotes='ls -l $NOTES_PATH'
+note() {
+	if [ -z ${1} ]; then
+		echo "Note name missing."
+		return
+	fi
+	${EDITOR} ${NOTES_PATH}/${1}.md;
+}
+

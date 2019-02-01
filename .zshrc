@@ -100,6 +100,7 @@ if [ -f $HOME/alias.sh ]; then
 fi
 
 export PATH=$PATH:$HOME/dotfiles/bin
+export NOTES_PATH=$HOME/Jeckel-Lab/notes
 
 #################################################
 ### Colorize Man pages
