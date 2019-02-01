@@ -4,6 +4,7 @@
 # Declare some env variables
 WORKSPACE=${WORKSPACE:-$HOME/Workspace}
 DOTFILES_PATH=${DOTFILES_PATH:-$HOME/dotfiles}
+CHEAT_PATH=${CHEAT_PATH:-$DOTFILES_PATH/cheat}
 
 # System
 alias upg='sudo apt-get update && sudo apt-get upgrade -y && sudo apt autoremove'
@@ -57,9 +58,10 @@ ssht() { ssh -t $1 tmux attach; }
 
 # Display cheatsheet
 cheat() { 
-	if [ -f ${DOTFILES_PATH}/cheat/$1.md ]; then
-		bat ${DOTFILES_PATH}/cheat/$1.md
+	if [ -f ${CHEAT_PATH}/${1}.md ]; then
+		bat ${CHEAT_PATH}/${1}.md
 	else
-		echo "No cheat files found for $1"
+		echo "No cheat files found for ${1}"
 	fi
 }
+echeat() { vim ${CHEAT_PATH}/${1}.md; }
