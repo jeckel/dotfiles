@@ -54,3 +54,12 @@ alias composer='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) 
 
 # ssh with tmux attach
 ssht() { ssh -t $1 tmux attach; }
+
+# Display cheatsheet
+cheat() { 
+	if [ -f ${DOTFILES_PATH}/cheat/$1.md ]; then
+		bat ${DOTFILES_PATH}/cheat/$1.md
+	else
+		echo "No cheat files found for $1"
+	fi
+}
