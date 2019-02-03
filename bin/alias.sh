@@ -5,10 +5,10 @@
 WORKSPACE=${WORKSPACE:-$HOME/Workspace}
 DOTFILES_PATH=${DOTFILES_PATH:-$HOME/dotfiles}
 CHEAT_PATH=${CHEAT_PATH:-$DOTFILES_PATH/cheat}
-NOTES_PATH=${NOTES_PATH:-$HOME/Documents/notes}
+export NOTES_PATH=${NOTES_PATH:-$HOME/Documents/notes}
 
 # Set default editor to vim or nano
-EDITOR=${EDITOR:-/usr/bin/vim}
+export EDITOR=${EDITOR:-/usr/bin/vim}
 # EDITOR=${EDITOR:-/bin/nano}
 
 # System
@@ -72,13 +72,4 @@ cheat() {
 echeat() { ${EDITOR} ${CHEAT_PATH}/${1}.md; }
 
 # Notes
-alias cdnotes='cd $NOTES_PATH'
-alias lsnotes='ls -l $NOTES_PATH'
-note() {
-	if [ -z ${1} ]; then
-		echo "Note name missing."
-		return
-	fi
-	${EDITOR} ${NOTES_PATH}/${1}.md;
-}
-
+alias note='${DOTFILES_PATH}/bin/note.sh'
