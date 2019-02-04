@@ -9,6 +9,7 @@
 - `^b` + `o` : Swap panes
 - `^b` + `q` : Show pane numbers
 - `^b` + `x` : Kill pane
+- `^b` + `z` : Toggle pane zoom
 
 ### Windows
 - `^b` + `c` : Create new window
