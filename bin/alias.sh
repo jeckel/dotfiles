@@ -55,6 +55,8 @@ alias ctask='clear && task'
 # Other
 
 alias composer='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) composer'
+alias dnode='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node:alpine'
+alias dnpm='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node:alpine npm'
 
 # Some functions
 
