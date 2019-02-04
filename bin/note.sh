@@ -10,12 +10,15 @@ fi
 function show_help()
 {
 cat << EOF
-Usage: ${0##*/} [-hls] [note_name]
+Usage: ${0##*/} [-hlsv] [note_name]
     -s      Sync notes
     -l      List notes
+    -v      View note in readonly
     -h      Show help
 EOF
 }
+
+VIEW_MODE=0
 
 # ----------------------------------------------------------
 # List existing notes
@@ -41,10 +44,10 @@ function sync_notes()
 # Edit or add not
 function edit_note()
 {
-	if [ -z ${1} ]; then
-		echo "Note name missing."
-		return
-	fi
+    if [ -z ${1} ]; then
+        echo "Note name missing."
+        return
+    fi
     if [ ! -f ${NOTES_PATH}/${1}.md ]; then
         read -p "Note '${1}' does not exist, would you like to create a new one? (y/n)" -n 1 -r
         echo
@@ -53,12 +56,29 @@ function edit_note()
             exit 0
         fi
     fi
-	${EDITOR} ${NOTES_PATH}/${1}.md;
+    ${EDITOR} ${NOTES_PATH}/${1}.md;
 }
 
 
+# ---------------------------------------------------------
+# View note
+function view_note()
+{
+    if [ -z ${1} ]; then
+        echo "Note name missing"
+        exit 1
+    fi
+
+    if [ ! -f ${NOTES_PATH}/${1}.md ]; then
+        echo "Note '${1}' not found."
+        exit 1
+    fi
+
+    bat ${NOTES_PATH}/${1}.md
+}
+
 OPTIND=1
-while getopts "hls" opt; do
+while getopts "hlsv" opt; do
     case "$opt" in
         h)
             show_help
@@ -71,6 +91,9 @@ while getopts "hls" opt; do
         s)
             sync_notes
             exit 0
+            ;;
+        v)
+            VIEW_MODE=1
             ;;
         '?')
             show_help
@@ -85,4 +108,8 @@ if [ -z ${1} ]; then
     exit 1
 fi
 
-edit_note ${1}
+if [ ${VIEW_MODE} -eq 1 ]; then
+    view_note ${1}
+else
+    edit_note ${1}
+fi
