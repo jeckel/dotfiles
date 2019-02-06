@@ -75,3 +75,6 @@ echeat() { ${EDITOR} ${CHEAT_PATH}/${1}.md; }
 
 # Notes
 alias note='${DOTFILES_PATH}/bin/note.sh'
+
+# Synchronize everything
+alias sync='echo "Sync tasks..." && task sync; echo "Sync notes..." && note -s'
