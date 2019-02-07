@@ -14,3 +14,7 @@
 ### Windows
 - `^b` + `c` : Create new window
 - `^b` + `w` : List windows
+
+## Commands
+Type `^b` + `:` : Enter command mode :
+- `rename-window <new name>`: Rename current window title
