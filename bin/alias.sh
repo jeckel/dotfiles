@@ -6,6 +6,7 @@ WORKSPACE=${WORKSPACE:-$HOME/Workspace}
 DOTFILES_PATH=${DOTFILES_PATH:-$HOME/dotfiles}
 CHEAT_PATH=${CHEAT_PATH:-$DOTFILES_PATH/cheat}
 export NOTES_PATH=${NOTES_PATH:-$HOME/Documents/notes}
+export PATH=${PATH}:/snap/bin
 
 # Set default editor to vim or nano
 export EDITOR=${EDITOR:-/usr/bin/vim}
