@@ -61,6 +61,8 @@ alias dnpm='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node
 
 # Some functions
 
+mkcd() { mkdir ${1} && cd ${1}; }
+
 # ssh with tmux attach
 ssht() { ssh -t ${1} tmux attach; }
 
