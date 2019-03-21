@@ -24,6 +24,9 @@ alias W='cd ${WORKSPACE}'
 alias ealias='${EDITOR} ${DOTFILES_PATH}/bin/alias.sh && source ${DOTFILES_PATH}/bin/alias.sh'
 alias ehosts='sudo ${EDITOR} /etc/hosts'
 
+# Git
+alias gpp='git pull --prune'
+
 # Docker
 alias d='docker'
 alias dr='docker run --rm -it'
@@ -44,6 +47,7 @@ alias dcd!='docker-compose down -v --remove-orphans'
 alias dce='docker-compose exec'
 alias dcl='docker-compose logs'
 alias dclf='docker-compose logs -f'
+alias dcp='docker-compose pull'
 alias dcps='docker-compose ps'
 alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
@@ -58,6 +62,7 @@ alias ctask='clear && task'
 alias composer='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) composer'
 alias dnode='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node:alpine'
 alias dnpm='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node:alpine npm'
+alias dlb4='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) loopback lb4'
 
 # Some functions
 
