@@ -91,3 +91,7 @@ alias note='${DOTFILES_PATH}/bin/note.sh'
 
 # Synchronize everything
 alias sync='echo "Sync tasks..." && task sync; echo "Sync notes..." && note -s'
+
+# Mysql
+mysql_load_gzdump() { pv $1 | gunzip | mysql ${@:2} }
+mysql_load_dump() { pv $1 | mysql ${@:2} }
