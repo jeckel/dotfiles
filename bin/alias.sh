@@ -61,6 +61,7 @@ alias ctask='clear && task'
 # Other
 
 alias dcomposer='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) composer'
+alias dcomposer72='docker run --rm -it -v $(pwd):/app -w /app jeckel/php-test:7.2-cli-alpine composer'
 alias dnode='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node:alpine'
 alias dnpm='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) node:alpine npm'
 alias dlb4='docker run --rm -it -v $(pwd):/app -w /app -u $(id -u):$(id -g) loopback lb4'
