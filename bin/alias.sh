@@ -14,7 +14,7 @@ export EDITOR=${EDITOR:-/usr/bin/vim}
 
 # System
 #alias upg='sudo apt-get update && sudo apt-get upgrade -y && sudo apt autoremove'
-alias upg='sudo apt-get update && sudo pkcon update'
+alias upg='sudo apt-get update && sudo pkcon update && sudo snap refresh'
 alias batt='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias dockly='if [ $(docker ps | grep dockly | wc -l) -eq 1 ]; then docker attach dockly; else docker run -it -v /var/run/docker.sock:/var/run/docker.sock --rm --name dockly lirantal/dockly; fi'
 alias dry='if [ $(docker ps | grep dry | wc -l) -eq 1 ]; then docker attach dry; else docker run -it -v /var/run/docker.sock:/var/run/docker.sock --rm --name dry moncho/dry; fi'
