@@ -27,6 +27,7 @@ alias ehosts='sudo ${EDITOR} /etc/hosts'
 
 # Git
 alias gpp='git pull --prune'
+alias gmc='gitmoji -c'
 
 # Docker
 alias d='docker'
