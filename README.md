@@ -12,7 +12,7 @@ Some files are "samples" files, which mean you can not use them directly, but ne
 
 ## Git Config
 
-> Sample file `.gitconfig.sample`.
+> Sample file: `.gitconfig.sample`.
 
 Just copy the file in your `$HOME/.gitconfig` and edit with your configuration
 
@@ -20,7 +20,7 @@ Just copy the file in your `$HOME/.gitconfig` and edit with your configuration
 
 I'm using KDE and konsole as a terminal client.
 
-> Configuration directory : `.local/share/konsole`
+> Configuration directory: `.local/share/konsole`
 
 I've setup 2 custom profiles to use with konsole when I connect to a remote server
 - a **Preprod** profile (with blue background) when I connect to a preprod/staging/testing server
@@ -33,7 +33,7 @@ With this profiles I always know on what kind of server I'm working on, and secu
 
 Profiles can be activated by a command line option `/usr/bin/konsole --profile=Prod` or `/usr/bin/konsole --profile=Preprod`
 
-Then I usually configure launcher script to connect to my remote server like this :
+Then I usually configure launcher script to connect to my remote server like this:
 ```bash
 /usr/bin/konsole --profile=Prod -e 'ssh -t my-remote-server '\''exec bash'\'''
 ```
@@ -56,12 +56,22 @@ Type=Application
 > Configuration directory : `.ssh/`
 
 I'm using 2 subdirectories :
-- `.ssh/config.d/` : Include files for remote server connexion configuration
-- `.ssh/keys/` : SSH keys used to connect to this servers
+- `.ssh/config.d/`: Include files for remote server connexion configuration
+- `.ssh/keys/`: SSH keys used to connect to this servers
 
 There is a root config file with global options at `.ssh/config`
 
-You will find a sample file for git repositories at [.ssh/config.d/git.config.sample](.ssh/config.d/git.config.sample)
+You will find a sample file for git repositories at [`.ssh/config.d/git.config.sample`](.ssh/config.d/git.config.sample)
+
+## Zsh and .oh-my-zsh
+
+I'm using `zsh` has default shell, upgraded with [`oh-my-zsh`](https://ohmyz.sh/).
+
+Then I added some custom configuration and aliases loaded by zsh when a new terminal is open. Custom configuration file should be located in your `$HOME/.oh-my-zsh/custom/` directory.
+
+Here I share with you my configuration files
+
+> Configuration directory:  [`.oh-my-zsh/custom/`](.oh-my-zsh/custom/)
 
 # Applications
 
@@ -69,9 +79,9 @@ You will find a sample file for git repositories at [.ssh/config.d/git.config.sa
 
 Command line visualizer. Supports mpd, with experimental support for alsa and pulseaudio.
 
-Project available on github : [dpayne/cli-visualizer](https://github.com/dpayne/cli-visualizer)
+Project available on github: [dpayne/cli-visualizer](https://github.com/dpayne/cli-visualizer)
 
-> Configuration directory : [`.config/vis/`](.config/vis/)
+> Configuration directory: [`.config/vis/`](.config/vis/)
 
 ## LazyGit
 
@@ -79,13 +89,13 @@ Lazygit is a usefull tool to manage your git project with the terminal
 
 Project documentation: [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
 
-This custom configuration file require [NerdFonts](https://www.nerdfonts.com/) to be installed
+This custom configuration file require [NerdFonts](https://www.nerdfonts.com/) to be installed (My prefered one is Hack Nerd Font)
 
-> Configuration file : [.config/lazygit/config.yml](.config/lazygit/config.yml)
+> Configuration file: [`.config/lazygit/config.yml`](.config/lazygit/config.yml)
 
 
 ## Midnight Commander
 
 Project documentation: [MidnightCommander/mc](https://github.com/MidnightCommander/mc)
 
-> Configuration directory : `.config/mc/`
+> Configuration directory: [`.config/mc/`](.config/mc/)
