@@ -9,10 +9,24 @@ Files and path in this repository are relativ to the `$HOME` directory. However,
 Some files are "samples" files, which mean you can not use them directly, but need to copy them and changes few things inside the file (personnal information) before using it.
 
 
+# System configuration
+
+## SSH Config
+
+Directory : `.ssh/`
+
+I'm using 2 subdirectories :
+- `.ssh/config.d/` : Include files for remote server connexion configuration
+- `.ssh/keys/` : SSH keys used to connect to this servers
+
+There is a root config file with global options at `.ssh/config`
+
+You will find a sample file for git repositories at `.ssh/config.d/git.config.sample`
+
 # Applications
 
 ## Midnight Commander
 
 Project documentation: [Midnight Commander/mc](https://github.com/MidnightCommander/mc)
 
-Configuration directory : `.config/mc`
+Configuration directory : `.config/mc/`
