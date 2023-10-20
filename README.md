@@ -61,7 +61,7 @@ I'm using 2 subdirectories :
 
 There is a root config file with global options at `.ssh/config`
 
-You will find a sample file for git repositories at `.ssh/config.d/git.config.sample`
+You will find a sample file for git repositories at [.ssh/config.d/git.config.sample](.ssh/config.d/git.config.sample)
 
 # Applications
 
@@ -71,7 +71,18 @@ Command line visualizer. Supports mpd, with experimental support for alsa and pu
 
 Project available on github : [dpayne/cli-visualizer](https://github.com/dpayne/cli-visualizer)
 
-> Configuration directory : `.config/vis`
+> Configuration directory : [`.config/vis/`](.config/vis/)
+
+## LazyGit
+
+Lazygit is a usefull tool to manage your git project with the terminal
+
+Project documentation: [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
+
+This custom configuration file require [NerdFonts](https://www.nerdfonts.com/) to be installed
+
+> Configuration file : [.config/lazygit/config.yml](.config/lazygit/config.yml)
+
 
 ## Midnight Commander
 
