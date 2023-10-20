@@ -1,5 +1,4 @@
-# dotfiles
-My Dot files
+# My Dot files
 
 Files and path in this repository are relativ to the `$HOME` directory. However, I suggest not to clone this repository into your `$HOME` but in a workspace directory instead, and pick the files / directory you need by :
 
@@ -23,14 +22,14 @@ I'm using KDE and konsole as a terminal client.
 
 > Configuration directory : `.local/share/konsole`
 
-I've setup 2 custom profiles to use with konsole to use when I connect to a remote server
+I've setup 2 custom profiles to use with konsole when I connect to a remote server
 - a **Preprod** profile (with blue background) when I connect to a preprod/staging/testing server
 - a **Prod** profile (with red background) when I connect to a production server
 
 ![Konsole with Prod profile](https://user-images.githubusercontent.com/2981531/276862750-62e96611-136d-4daa-8f03-4d26850c12f4.png)
 ![Konsole with Preprod profile](https://user-images.githubusercontent.com/2981531/276862755-e843c07c-7c3a-4c60-b104-29897037f69a.png)
 
-With this profiles I have an explicit view of what kind of server I'm working on, and security measure I need to take.
+With this profiles I always know on what kind of server I'm working on, and security measure I need to take.
 
 Profiles can be activated by a command line option `/usr/bin/konsole --profile=Prod` or `/usr/bin/konsole --profile=Preprod`
 
