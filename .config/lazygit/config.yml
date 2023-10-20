@@ -1,0 +1,11 @@
+gui:
+  nerdFontsVersion: "3"
+  branchColors:
+    'doc': '#ff00ff'
+    'feature': '#11aaff'
+  theme:
+    activeBorderColor:
+      - blue
+      - bold
+git:
+  skipHookPrefix: WIP
