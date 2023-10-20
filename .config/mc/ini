@@ -1,7 +1,7 @@
 [Midnight-Commander]
 verbose=true
 shell_patterns=true
-auto_save_setup=true
+auto_save_setup=false
 preallocate_space=false
 auto_menu=false
 use_internal_view=true
@@ -87,7 +87,7 @@ skin=dark
 
 [Layout]
 output_lines=0
-left_panel_size=70
+left_panel_size=92
 top_panel_size=0
 message_visible=true
 keybar_visible=true
