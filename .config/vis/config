@@ -46,7 +46,7 @@ visualizer.spectrum.bar.width=1
 visualizer.spectrum.bar.spacing=1
 
 ##Available smoothing options are monstercat, sgs, none.
-#visualizer.spectrum.smoothing.mode=sgs
+visualizer.spectrum.smoothing.mode=monstercat
 
 ##This configures the falloff effect on the spectrum visualizer. Available falloff options are fill,top,none.
 ##Defaults to "fill"
@@ -88,4 +88,4 @@ visualizer.spectrum.bar.spacing=1
 colors.override.terminal=false
 
 ##Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. The default scheme is "colors".
-colors.scheme=rainbow
+colors.scheme=mycolors
