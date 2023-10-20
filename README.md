@@ -13,13 +13,48 @@ Some files are "samples" files, which mean you can not use them directly, but ne
 
 ## Git Config
 
-Sample file `.gitconfig.sample`.
+> Sample file `.gitconfig.sample`.
 
 Just copy the file in your `$HOME/.gitconfig` and edit with your configuration
 
+## Konsole
+
+I'm using KDE and konsole as a terminal client.
+
+> Configuration directory : `.local/share/konsole`
+
+I've setup 2 custom profiles to use with konsole to use when I connect to a remote server
+- a **Preprod** profile (with blue background) when I connect to a preprod/staging/testing server
+- a **Prod** profile (with red background) when I connect to a production server
+
+![Konsole with Prod profile](https://user-images.githubusercontent.com/2981531/276862750-62e96611-136d-4daa-8f03-4d26850c12f4.png)
+![Konsole with Preprod profile](https://user-images.githubusercontent.com/2981531/276862755-e843c07c-7c3a-4c60-b104-29897037f69a.png)
+
+With this profiles I have an explicit view of what kind of server I'm working on, and security measure I need to take.
+
+Profiles can be activated by a command line option `/usr/bin/konsole --profile=Prod` or `/usr/bin/konsole --profile=Preprod`
+
+Then I usually configure launcher script to connect to my remote server like this :
+```bash
+/usr/bin/konsole --profile=Prod -e 'ssh -t my-remote-server '\''exec bash'\'''
+```
+
+And I can setup a desktop launcher like this
+```ini
+[Desktop Entry]
+Comment=SSH Connexion to my-remote-server
+Exec=/usr/bin/konsole --profile=Prod -e 'ssh -t my-remote-server '\\''exec bash'\\'''
+GenericName=My Remote Server
+Icon=bash
+Name=My Remote Server
+StartupNotify=true
+Terminal=false
+Type=Application
+```
+
 ## SSH Config
 
-Directory : `.ssh/`
+> Configuration directory : `.ssh/`
 
 I'm using 2 subdirectories :
 - `.ssh/config.d/` : Include files for remote server connexion configuration
@@ -37,11 +72,10 @@ Command line visualizer. Supports mpd, with experimental support for alsa and pu
 
 Project available on github : [dpayne/cli-visualizer](https://github.com/dpayne/cli-visualizer)
 
-Configuration directory available at `.config/vis`
+> Configuration directory : `.config/vis`
 
 ## Midnight Commander
 
 Project documentation: [MidnightCommander/mc](https://github.com/MidnightCommander/mc)
 
-Configuration directory : `.config/mc/`
-
+> Configuration directory : `.config/mc/`
