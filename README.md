@@ -25,8 +25,17 @@ You will find a sample file for git repositories at `.ssh/config.d/git.config.sa
 
 # Applications
 
+## CLI Visualizer
+
+Command line visualizer. Supports mpd, with experimental support for alsa and pulseaudio.
+
+Project available on github : [dpayne/cli-visualizer](https://github.com/dpayne/cli-visualizer)
+
+Configuration directory available at `.config/vis`
+
 ## Midnight Commander
 
-Project documentation: [Midnight Commander/mc](https://github.com/MidnightCommander/mc)
+Project documentation: [MidnightCommander/mc](https://github.com/MidnightCommander/mc)
 
 Configuration directory : `.config/mc/`
+
