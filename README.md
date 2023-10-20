@@ -11,6 +11,12 @@ Some files are "samples" files, which mean you can not use them directly, but ne
 
 # System configuration
 
+## Git Config
+
+Sample file `.gitconfig.sample`.
+
+Just copy the file in your `$HOME/.gitconfig` and edit with your configuration
+
 ## SSH Config
 
 Directory : `.ssh/`
