@@ -1,25 +1,25 @@
-# Docker                                                                                                                                    │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:22:46]
-alias d='docker'                                                                                                                            │> $ ln -s ~/Documents/00-Shared-Config/dotfiles/.config/lazygit                                                                            
-alias dr='docker run --rm -it'                                                                                                              │ln: impossible de créer le lien symbolique './lazygit': Le fichier existe
-alias de='docker exec -it'                                                                                                                  │                                                                                                                                            
-alias dps='docker ps'                                                                                                                       │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:22:54]
-alias dpsa='docker ps -a'                                                                                                                   │> $ rm -Rf lazygit                                                                                                                         
-alias dl='docker logs'                                                                                                                      │                                                                                                                                            
-alias dlf='docker logs -f'                                                                                                                  │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:23:08]
-alias ddf='docker system df'                                                                                                                │> $ ln -s ~/Documents/00-Shared-Config/dotfiles/.config/lazygit                                                                            
-dsh() { docker exec -it ${1} sh; }                                                                                                          │                                                                                                                                            
-                                                                                                                                            │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:23:09]
-# Docker-Compose                                                                                                                            │> $ ^M                                                                                                                                     
-alias dc='docker-compose'                                                                                                                   │ : commande introuvable
-alias dcb='docker-compose build'                                                                                                            │                                                                                                                                            
-alias dcbp='docker-compose build --pull'                                                                                                    │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:42:55]
-alias dcb!='docker-compose build --pull --no-cache'                                                                                         │> $ \ue5fc                                                                                                                                 
-alias dcd!='docker-compose down -v --remove-orphans'                                                                                        │ue5fc : commande introuvable
-alias dce='docker-compose exec'                                                                                                             │                                                                                                                                            
-alias dcl='docker-compose logs'                                                                                                             │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:42:57]
-alias dclf='docker-compose logs -f'                                                                                                         │> $ echo \ue5fc                                                                                                                            
-alias dcp='docker-compose pull'                                                                                                             │ue5fc
-alias dcps='docker-compose ps'                                                                                                              │                                                                                                                                            
-alias dcr='docker-compose run --rm'                                                                                                         │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:43:01]
-alias dcu='docker-compose up'                                                                                                               │> $ print "\ue5fc"                                                                                                                         
+# Docker
+alias d='docker'
+alias dr='docker run --rm -it'
+alias de='docker exec -it'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias dl='docker logs'
+alias dlf='docker logs -f'
+alias ddf='docker system df'
+dsh() { docker exec -it ${1} sh; }
+
+# Docker-Compose
+alias dc='docker-compose'
+alias dcb='docker-compose build'
+alias dcbp='docker-compose build --pull'
+alias dcb!='docker-compose build --pull --no-cache'
+alias dcd!='docker-compose down -v --remove-orphans'
+alias dce='docker-compose exec'
+alias dcl='docker-compose logs'
+alias dclf='docker-compose logs -f'
+alias dcp='docker-compose pull'
+alias dcps='docker-compose ps'
+alias dcr='docker-compose run --rm'
+alias dcu='docker-compose up'
 alias dcud='docker-compose up -d'
