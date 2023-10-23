@@ -61,17 +61,19 @@ I'm using 2 subdirectories :
 
 There is a root config file with global options at `.ssh/config`
 
-You will find a sample file for git repositories at [`.ssh/config.d/git.config.sample`](.ssh/config.d/git.config.sample)
+You will find a sample file for git repositories at [`.ssh/config.d/git.config.sample`](/.ssh/config.d/git.config.sample)
 
 ## Zsh and .oh-my-zsh
 
-I'm using `zsh` has default shell, upgraded with [`oh-my-zsh`](https://ohmyz.sh/).
+I'm using `zsh` has default shell, upgraded with [`oh-my-zsh`](https://ohmyz.sh/), [NerdFonts](https://www.nerdfonts.com/) and [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
 Then I added some custom configuration and aliases loaded by zsh when a new terminal is open. Custom configuration file should be located in your `$HOME/.oh-my-zsh/custom/` directory.
 
 Here I share with you my configuration files
 
-> Configuration directory:  [`.oh-my-zsh/custom/`](.oh-my-zsh/custom/)
+> Configuration directory:  [`.oh-my-zsh/custom/`](/.oh-my-zsh/custom/)
+> Powerlevel10k: [`.p10k.zsh`](/.p10k.zsh)
+> ZSH: [`.zshrc`](/.zshrc)
 
 # Applications
 
@@ -81,7 +83,7 @@ Command line visualizer. Supports mpd, with experimental support for alsa and pu
 
 Project available on github: [dpayne/cli-visualizer](https://github.com/dpayne/cli-visualizer)
 
-> Configuration directory: [`.config/vis/`](.config/vis/)
+> Configuration directory: [`.config/vis/`](/.config/vis/)
 
 ## LazyGit
 
@@ -91,7 +93,7 @@ Project documentation: [jesseduffield/lazygit](https://github.com/jesseduffield/
 
 This custom configuration file require [NerdFonts](https://www.nerdfonts.com/) to be installed (My prefered one is Hack Nerd Font)
 
-> Configuration file: [`.config/lazygit/config.yml`](.config/lazygit/config.yml)
+> Configuration file: [`.config/lazygit/config.yml`](/.config/lazygit/config.yml)
 
 
 ## Midnight Commander
