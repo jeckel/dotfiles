@@ -72,8 +72,12 @@ Then I added some custom configuration and aliases loaded by zsh when a new term
 Here I share with you my configuration files
 
 > Configuration directory:  [`.oh-my-zsh/custom/`](/.oh-my-zsh/custom/)
+>
 > Powerlevel10k: [`.p10k.zsh`](/.p10k.zsh)
-> ZSH: [`.zshrc`](/.zshrc)
+>
+> ZSH: [`.zshrc`](/.zshrc)clear
+
+![Prompt screen shot](https://user-images.githubusercontent.com/2981531/277294265-012c3cd5-b47b-4479-80ab-711264f38e69.png)
 
 # Applications
 
