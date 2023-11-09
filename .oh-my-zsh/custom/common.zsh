@@ -26,15 +26,18 @@ alias cls='clear'
 alias gpp='git pull --prune'
 alias lg='lazygit'
 
+# Php
+alias cas='castor'
+
 # Mysql
 mysql_load_gzdump() { pv $1 | gunzip | mysql ${@:2} }
 mysql_load_dump() { pv $1 | mysql ${@:2} }
 
 # Colorize tail
-function tailc {                                                                                                                            │> $ cd $HOME/.config                                                                                          [±feature/rework-dot-files ●]
-    tail -f $1 | sed --unbuffered \                                                                                                         │                                                                                                                                            
-    -e 's/\(.*INFO.*\)/\o033[32m\1\o033[39m/' \                                                                                             │jeckel@Desk-L-Jeckel ~/.config                                                                                                   [11:22:46]
-    -e 's/\(.*WARNING.*\)/\o033[33m\1\o033[39m/' \                                                                                          │> $ ln -s ~/Documents/00-Shared-Config/dotfiles/.config/lazygit                                                                            
-    -e 's/\(.*ERROR.*\)/\o033[31m\1\o033[39m/' \                                                                                            │ln: impossible de créer le lien symbolique './lazygit': Le fichier existe
-    -e 's/\(.*CRITICAL.*\)/\o033[41;97m\1\o033[39;49m/'                                                                                     │                                                                                                                                            
+function tailc {
+    tail -f $1 | sed --unbuffered \
+    -e 's/\(.*INFO.*\)/\o033[32m\1\o033[39m/' \
+    -e 's/\(.*WARNING.*\)/\o033[33m\1\o033[39m/' \
+    -e 's/\(.*ERROR.*\)/\o033[31m\1\o033[39m/' \
+    -e 's/\(.*CRITICAL.*\)/\o033[41;97m\1\o033[39;49m/'
 }
