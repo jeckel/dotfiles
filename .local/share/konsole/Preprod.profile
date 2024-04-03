@@ -1,7 +1,7 @@
 [Appearance]
 ColorScheme=Preprod
 DimmValue=92
-Font=Hack,10,-1,7,50,0,0,0,0,0
+Font=Hack Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 IgnoreWcWidth=false
 TabColor=255,128,128
 UseFontLineChararacters=true
