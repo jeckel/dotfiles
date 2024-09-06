@@ -2,3 +2,17 @@
 /.idea
 
 /.vim/.netrwhist 
+
+#Filter config files
+#/.config
+#!/.config/i3
+#!/.config/kitty
+#!/.config/lazygit
+#!/.config/mc
+#!/.config/polybar
+#!/.config/rofi
+#!/.config/vis
+.config
+!.config/lazygit
+!.config/i3
+!.config/polybar

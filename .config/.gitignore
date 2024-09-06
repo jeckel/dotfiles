@@ -1,0 +1,11 @@
+/*
+!.gitignore
+!/i3
+!/kitty
+!/lazygit
+!/mc
+!/polybar
+!/rofi
+!/vis
+
+*.swp
