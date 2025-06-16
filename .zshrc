@@ -68,7 +68,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git sudo docker chucknorris command-not-found composer
+  git sudo docker command-not-found composer
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,7 +119,17 @@ export LESS_TERMCAP_mh=$(tput dim)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-chuck_cow
+#chuck_cow
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+. "$HOME/.cargo/env"
+
+# proto
+export PROTO_HOME="$HOME/.proto";
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";

@@ -13,7 +13,9 @@ export PATH="$HOME/gems/bin:$HOME/.local/bin:$PATH"
 # System aliases and functions
 
 # Alias to update system on KDE Neon
-alias upg='sudo -- sh -c "apt-get update; pkcon update -y; snap refresh; apt autoremove -y; apt-get clean"'
+#alias upg='sudo -- sh -c "apt-get update; pkcon update -y; snap refresh; apt autoremove -y; apt-get clean"'
+#
+alias upg='sudo -- sh -c "apt update; apt upgrade -y; snap refresh;apt-get clean"'
 
 # Edit config files
 alias ehosts='sudo ${EDITOR} /etc/hosts'
@@ -42,3 +44,5 @@ function tailc {
     -e 's/\(.*ERROR.*\)/\o033[31m\1\o033[39m/' \
     -e 's/\(.*CRITICAL.*\)/\o033[41;97m\1\o033[39;49m/'
 }
+
+alias kssh="TERM=xterm-256color ssh"

@@ -64,8 +64,11 @@ bindsym $mod+Shift+a kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
-# Launche custom command
-bindsym $mod+Shift+Return exec --no-startup-id rofi -show run
+# Launch custom command
+bindsym $mod+Shift+d exec --no-startup-id "rofi -show run"
+
+# Switch window
+bindsym $mod+Tab exec --no-startup-id "rofi -show window"
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -97,6 +100,12 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Bond resize
+bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -126,12 +135,12 @@ bindsym $mod+q focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 "1: Home"
-set $ws2 "2: Web"
+set $ws2 "2: Work"
 set $ws3 "3: Terminal"
 set $ws4 "4: Code"
 set $ws5 "5: Chat"
-set $ws6 "6: Lamy-Liaisons"
-set $ws7 "7"
+set $ws6 "6: Music"
+set $ws7 "7: Game"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
@@ -142,7 +151,7 @@ bindsym $mod+eacute workspace $ws2
 bindsym $mod+quotedbl workspace $ws3
 bindsym $mod+apostrophe workspace $ws4
 bindsym $mod+parenleft workspace $ws5
-bindsym $mod+minus workspace number $ws6
+bindsym $mod+minus workspace $ws6
 bindsym $mod+egrave workspace number $ws7
 bindsym $mod+underscore workspace number $ws8
 bindsym $mod+ccedilla workspace number $ws9
@@ -222,3 +231,4 @@ assign [class="teams-for-linux"] $ws5
 exec --no-startup-id /usr/bin/ssh-agent bash -c 'i3'
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always /home/jeckel/.config/i3/gnome-keyring.sh
